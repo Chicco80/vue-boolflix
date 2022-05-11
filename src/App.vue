@@ -7,7 +7,7 @@
     <main>
       <app-grid :items="movies" title="Movies"/>
       <app-grid :items="series" title="Series"/>
-     
+    
     </main>
 
   </div>
@@ -44,7 +44,7 @@ export default {
         console.log(error)
       });
     },
-       getSeries(queryParams){
+      getSeries(queryParams){
       axios.get(this.apiPath + 'tv', queryParams).then((res)=>{
         this.series = res.data.results;
                 console.log(this.movies)
@@ -71,6 +71,17 @@ export default {
 }
 </script>
 
+
 <style lang="scss">
+  @import './assets/style/general.scss';
+
+  h1{
+    color: red;
+  }
+  header{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+  }
 
 </style>
