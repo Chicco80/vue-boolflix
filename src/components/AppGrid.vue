@@ -6,7 +6,7 @@
         id: {{item.id}}
         {{item.original_title ? item.original_title : item.original_name}}
         {{item.title ? item.title : item.name}}
-        <div v-if="item.original_language">
+        <div v-if="item.original_language == 'en' && 'it'">
         <img :src="'../img/'+ item.original_language + '.png'" alt="item.name">
         </div>
         <div v-else>
