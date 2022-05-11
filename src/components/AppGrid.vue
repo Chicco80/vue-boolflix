@@ -3,6 +3,7 @@
         <h2>{{title}}</h2>
     <ul>
         <li v-for="item in items" :key="item.id">
+        <img :src=" apiImg + item.poster_path" alt="">
         id: {{item.id}}
         {{item.original_title ? item.original_title : item.original_name}}
         {{item.title ? item.title : item.name}}
@@ -36,3 +37,5 @@ export default {
 <style lang="scss" scoped>
 
 </style>
+
+//https://image.tmdb.org/t/p/w500
