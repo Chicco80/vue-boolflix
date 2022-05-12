@@ -26,11 +26,12 @@ export default {
   },
   data(){
     return{
-      apiImg: 'https://image.tmdb.org/t/p/w500',
+      apiImg: 'https://image.tmdb.org/t/p/w342',
       apiKey:'e99307154c6dfb0b4750f6603256716d',
       apiPath:'https://api.themoviedb.org/3/search/',
       movies:[],
       series:[],
+      
       
     }
   },
@@ -60,7 +61,8 @@ export default {
           api_key: this.apiKey,
           query: text,
           language:'it-IT',
-        }
+        },
+       
     }
     this.getMovies(queryParams);
     this.getSeries(queryParams);

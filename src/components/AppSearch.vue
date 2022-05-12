@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="py-2">
     <input type="text" v-model='search' @keyup.enter="$emit('performSearch', search)">
     <button @click="cerca">cerca</button>  
 </div>  
