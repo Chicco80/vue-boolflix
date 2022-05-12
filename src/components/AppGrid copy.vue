@@ -5,7 +5,7 @@
         <div class="row ">
             <div  v-for="item in items" :key="item.id" class="col-4 my-3">
                 <div class="card d-flex">
-                    <img  :src="'https://image.tmdb.org/t/p/w342' + item.poster_path" class="card-img-top" :alt="item.title">
+                    <img :src="'https://image.tmdb.org/t/p/w342' + item.poster_path" class="card-img-top" alt="item.name">
                     <div class="overlay d-flex ">
                         <div class="text">{{item.overview}}
                             <div class="card-body">
