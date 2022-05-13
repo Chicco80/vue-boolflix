@@ -16,9 +16,9 @@ export default {
 
     },
     computed:{
-        // mysearch({
-        //     return state.search
-        // })
+        
+        
+        
     },
     methods:{
         cerca(){

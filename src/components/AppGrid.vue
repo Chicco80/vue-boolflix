@@ -5,14 +5,14 @@
         <div class="row ">
             <div  v-for="item in items" :key="item.id" class="col-4 my-3">
                 <div class="card d-flex">
-                    <img  :src="'https://image.tmdb.org/t/p/w342' + item.poster_path" class="card-img-top" :alt="item.title">
+                    <img  :src="'https://image.tmdb.org/t/p/w342' + item.poster_path" class="card-img-top h-100" :alt="item.title">
                     <div class="overlay d-flex ">
                         <div class="text">{{item.overview}}
                             <div class="card-body">
                                 <h5 class="card-title">{{item.original_title ? item.original_title : item.original_name}}</h5>
                                 <h6>{{item.title ? item.title : item.name}}</h6>
                                 <div v-if="item.original_language == 'en' && 'it'">
-                                    <img :src="'../img/'+ item.original_language + '.png'" alt="item.name" class="icons">
+                                    <img :src="'../img/'+ item.original_language + '.png'" alt="item.name" class="icons img-fluid">
                                 </div>
                                 <div v-else>
                                     <img :src="'../img/an.png'" alt="item.name" class="icons">
@@ -53,7 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 #app{
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 
@@ -71,7 +71,8 @@ ul{
 }
 .card{
     background-color: black;
-    height: 100%;
+    height: 440px;
+    // width: 100%;
 }
 
 .overlay{
@@ -84,6 +85,7 @@ ul{
     right: 0;
     bottom: 0;
     text-align: center;    
+    
 }
 
 .text{
@@ -96,7 +98,7 @@ ul{
     padding:10px;
     display: none;
     font-size: 12px;
-
+    overflow:auto;
 }
 .card :hover .text{
     display:block;
@@ -105,14 +107,11 @@ ul{
     height: 100%;
     width: 100%;
     position: relative;
+    
+
 }
-
-
-
-
-
 
 
 </style>
 
-https://image.tmdb.org/t/p/w500
+// https://image.tmdb.org/t/p/w500

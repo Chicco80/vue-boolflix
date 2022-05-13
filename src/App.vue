@@ -62,7 +62,7 @@ export default {
           query: text,
           language:'it-IT',
         },
-       
+
     }
     this.getMovies(queryParams);
     this.getSeries(queryParams);
